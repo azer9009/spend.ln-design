@@ -1,0 +1,503 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #0d121f;
+}
+
+.main-container {
+  background-color: #f6f7f9;
+  width: 100%;
+  height: 125vh;
+  display: flex;
+  padding: 0 0 150px 0;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .main-container {
+    width: 2050px;
+    height: 150vh;
+  }
+}
+.main-container .navbar {
+  background-color: #ffff;
+  min-height: 1024px;
+  max-width: 266px;
+  padding: 40px 16px 46px 32px;
+  gap: 56px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .main-container .navbar {
+    display: none;
+  }
+}
+.main-container .navbar .logo {
+  text-align: center;
+}
+.main-container .navbar__lists {
+  gap: 56px;
+}
+.main-container .navbar__lists .main-menu {
+  gap: 12px;
+}
+.main-container .navbar__lists .main-menu .header-title {
+  color: #90A3BF;
+}
+.main-container .navbar__lists .main-menu .menu-list {
+  gap: 32px;
+}
+.main-container .navbar__lists .main-menu .menu-list__item {
+  display: flex;
+  color: #596780;
+  gap: 14px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 750ms;
+}
+.main-container .navbar__lists .main-menu .menu-list__item-active, .main-container .navbar__lists .main-menu .menu-list :hover {
+  background-color: #7C5CFC;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  padding: 14px 108px 14px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.main-container .navbar__lists .preferences {
+  gap: 88px;
+}
+.main-container .navbar__lists .preferences .logout-btn {
+  color: #596780;
+  font-size: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.main-container .navbar__lists .preferences-elements {
+  gap: 24px;
+}
+.main-container .navbar__lists .preferences-elements .header-title {
+  color: #90A3BF;
+}
+.main-container .navbar__lists .preferences-elements .preferences-list {
+  gap: 32px;
+}
+.main-container .navbar__lists .preferences-elements .preferences-list .preferences-list__item {
+  color: #596780;
+  font-size: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  cursor: pointer;
+  transition: 750ms;
+}
+.main-container .navbar__lists .preferences-elements .preferences-list__item:hover {
+  background-color: #7C5CFC;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  padding: 14px 108px 14px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.main-container .main-content {
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .main-container .main-content {
+    flex-direction: column;
+  }
+}
+.main-container .main-content .header-search {
+  background-color: white;
+  width: 1665px;
+  min-height: 80px;
+  padding: 18px 32px;
+  align-items: center;
+}
+.main-container .main-content .header-search .input form input[type=text] {
+  padding: 11px 271px 12px 24px;
+  border-radius: 70px;
+  border: 2px solid #C3D4E9;
+}
+.main-container .main-content .header-search .input form button {
+  background-color: transparent;
+  border: none;
+}
+.main-container .main-content .header-search .profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.main-container .main-content .info-wrapper {
+  padding: 32px 32px;
+  gap: 24px;
+}
+.main-container .main-content .info-wrapper .info-col-1 {
+  gap: 24px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .stats {
+  background-color: white;
+  max-width: 726px;
+  min-height: 338px;
+  gap: 90px;
+  padding: 24px;
+  border-radius: 10px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .stats .header p {
+  color: #1A202C;
+  font-weight: 600;
+}
+.main-container .main-content .info-wrapper .info-col-1 .stats .stats-img {
+  height: 220px;
+  width: 700px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense {
+  display: flex;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .line {
+  color: #F0F0F0;
+  height: 100px;
+  width: 1px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card {
+  width: 340px;
+  min-height: 168px;
+  background-color: white;
+  padding: 24px 24px;
+  gap: 19px;
+  border-radius: 10px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-1 p {
+  color: #1A202C;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-2 {
+  display: flex;
+  align-items: center;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-2 .price {
+  color: #1A202C;
+  font-weight: 700;
+  font-size: 32px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-2 .usd {
+  color: #90A3BF;
+  font-weight: 600;
+  font-size: 14px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-3 p {
+  font-size: 12px;
+  color: #90A3BF;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-3 p .green {
+  color: #7FB519;
+}
+.main-container .main-content .info-wrapper .info-col-1 .income-expense .income-card .line-3 p .red {
+  color: #FF4423;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card {
+  background-color: white;
+  max-width: 726px;
+  min-height: 326px;
+  padding: 19px 24px 26px 24px;
+  gap: 39px;
+  border-radius: 10px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .row-wrapper {
+  gap: 14px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .row-wrapper .line {
+  background-color: #E0E9F4;
+  width: 730px;
+  height: 1px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .row-wrapper .row {
+  align-items: center;
+  padding: 8px 17px 7px 0;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .row-wrapper .row p {
+  color: #1A202C;
+  font-weight: 600;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .row-wrapper .row .brand p {
+  color: #1A202C;
+  font-weight: 600;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .transactions p {
+  font-size: 12px;
+  color: #90A3BF;
+  font-weight: 500;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .header {
+  align-items: center;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .header p {
+  color: #1A202C;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main-container .main-content .info-wrapper .info-col-1 .history-card .header a {
+  padding: 10px 16px 10px 42px;
+  border: 1px solid #C3D4E9;
+  border-radius: 6px;
+  color: #1A202C;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.main-container .main-content .info-wrapper .info-col-2 {
+  gap: 24px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card {
+  background-color: white;
+  width: 340px;
+  min-height: 271px;
+  padding: 24px 24px;
+  gap: 40px;
+  border-radius: 10px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .header p {
+  color: #1A202C;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .line-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .line-2 .price {
+  color: #1A202C;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .line-2 .usd {
+  color: #90A3BF;
+  font-weight: 600;
+  font-size: 14px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .desc {
+  color: #90A3BF;
+  font-size: 12px;
+  font-weight: 600;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .button-wrapper {
+  gap: 24px;
+  margin-top: 30px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .button-wrapper .primary-btn {
+  background-color: #7C5CFC;
+  padding: 16px 30px 16px 20px;
+  color: white;
+  border-radius: 10px;
+  gap: 15px;
+  max-width: 114px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .button-wrapper .secondary-btn {
+  background-color: transparent;
+  padding: 16px 30px 16px 20px;
+  color: black;
+  border-radius: 10px;
+  gap: 15px;
+  max-width: 114px;
+  border: 2px solid #7C5CFC;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 10ms;
+}
+.main-container .main-content .info-wrapper .info-col-2 .balance-card .button-wrapper .secondary-btn:hover {
+  background-color: #7C5CFC;
+  color: white;
+  transition: 900ms;
+}
+.main-container .main-content .info-wrapper .info-col-2 .category-card {
+  background-color: white;
+  max-width: 340px;
+  min-height: 585px;
+  border-radius: 10px;
+  padding: 24px 24px 33px 24px;
+  gap: 35px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .category-card .header p {
+  color: #1A202C;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .category-card .row-wrapper {
+  gap: 20px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .category-card .row-wrapper .row p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A202C;
+}
+.main-container .main-content .info-wrapper .info-col-2 .category-card .row-wrapper .row .category {
+  gap: 12px;
+}
+.main-container .main-content .info-wrapper .info-col-2 .category-card .row-wrapper .row .category p {
+  font-size: 12px;
+  color: #596780;
+  font-weight: 600;
+}
+
+.testimonials-layout {
+  width: 100%;
+  height: 80vh;
+  background-color: #0d121f;
+  padding: 120px 90px 90px 10px;
+  flex-direction: column;
+  gap: 64px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonials-layout {
+    flex-direction: column;
+    margin-top: 500px;
+  }
+}
+.testimonials-layout .header-title {
+  gap: 24px;
+}
+.testimonials-layout .header-title .title-f {
+  color: #7C5CFC;
+  font-size: 20px;
+  font-weight: 600;
+}
+.testimonials-layout .header-title .title-s {
+  color: #ffff;
+  font-size: 40px;
+  font-weight: 700;
+}
+.testimonials-layout .header-title .desc {
+  color: #90A3BF;
+  font-weight: 400;
+  font-size: 20px;
+}
+.testimonials-layout .card-wrapper {
+  gap: 24px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .testimonials-layout .card-wrapper {
+    flex-direction: column;
+  }
+}
+.testimonials-layout .card-wrapper .card {
+  background-color: #1A202C;
+  max-width: 384px;
+  min-height: 320px;
+  padding: 32px 32px;
+  border-radius: 12px;
+  gap: 50px;
+}
+.testimonials-layout .card-wrapper .card .texts {
+  gap: 16px;
+}
+.testimonials-layout .card-wrapper .card .texts .header {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+.testimonials-layout .card-wrapper .card .texts .main {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  max-width: 300px;
+}
+.testimonials-layout .card-wrapper .card .line {
+  background-color: #90A3BF;
+  width: 320px;
+  height: 1px;
+  opacity: 30%;
+}
+.testimonials-layout .card-wrapper .card .profile-row {
+  gap: 24px;
+}
+.testimonials-layout .card-wrapper .card .profile-row .profile-texts .name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.testimonials-layout .card-wrapper .card .profile-row .profile-texts .job {
+  color: #C3D4E9;
+  font-weight: 400;
+  font-size: 14px;
+}
+.testimonials-layout .button-wrapper {
+  gap: 24px;
+  text-align: center;
+}
+.testimonials-layout .button-wrapper .primary-btn {
+  background-color: #1A202C;
+  border-radius: 100px;
+  padding: 16px 15px;
+}
+.testimonials-layout .button-wrapper .secondary-btn {
+  background-color: #7C5CFC;
+  border-radius: 100px;
+  padding: 16px 15px;
+}
+
+.d-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-spb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.a-center {
+  align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

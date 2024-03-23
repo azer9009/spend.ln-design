@@ -1,0 +1,500 @@
+@import 'values';
+@import 'responsive';
+
+body{
+    font-family: $font;
+    background-color: #0d121f;
+}
+
+.main-container{
+    background-color: $background-color;
+    width: 100%;
+    height: 125vh;
+    display: flex;
+    padding: 0 0 150px 0;
+    @include responsive(smartphone-portrait){
+        width: 2050px;
+        height: 150vh;
+    }
+    .navbar{
+        background-color: $light-background-color;
+        min-height: 1024px;
+        max-width: 266px;
+        padding: 40px 16px 46px 32px;
+        gap: 56px;
+        @include responsive(smartphone-portrait){
+            display: none;
+        }
+        .logo{
+            text-align: center;
+        }
+        &__lists{
+            gap: 56px;
+            .main-menu{
+                gap: 12px;
+                .header-title{
+                    color: #90A3BF;
+                }
+                .menu-list{
+                    gap: 32px;
+                    
+                    &__item{
+                        display: flex;
+                        color: #596780;
+                        gap: 14px;
+                        font-size: 18px;
+                        cursor: pointer;
+                        font-weight: 500;
+                        transition: 750ms;
+                    }
+                    &__item-active,:hover{
+                        background-color: $text-background-color;
+                        display: flex;
+                        gap: 14px;
+                        align-items: center;
+                        color: white;
+                        font-weight: 600;
+                        padding: 14px 108px 14px 16px;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .preferences{
+                gap: 88px;
+                .logout-btn{
+                    color: #596780;
+                            font-size: 18px;
+                            display: flex;
+                            gap: 14px;
+                            align-items: center;
+                }
+                &-elements{
+                    gap: 24px;
+                    .header-title{
+                        color: #90A3BF;
+                    }
+                    .preferences-list{
+                        gap: 32px;
+                        .preferences-list__item {
+                            color: #596780;
+                            font-size: 18px;
+                            display: flex;
+                            gap: 14px;
+                            align-items: center;
+                            cursor: pointer;
+                            transition: 750ms;
+                        }
+                    }
+                    .preferences-list__item:hover{
+                        background-color: $text-background-color;
+                        display: flex;
+                        gap: 14px;
+                        align-items: center;
+                        color: white;
+                        font-weight: 600;
+                        padding: 14px 108px 14px 16px;
+                        border-radius: 10px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .main-content{
+        @include responsive(smartphone-portrait){
+            flex-direction: column;
+        }
+        .header-search{
+            background-color: white;
+            width: 1665px;
+            min-height: 80px;
+            padding: 18px 32px;
+            align-items: center;
+            .input{
+           form{
+            input[type=text]{
+            padding: 11px 271px 12px 24px;
+            border-radius: 70px;
+            border:2px solid #C3D4E9;
+            
+            }
+           button{
+           background-color: transparent;
+           border: none;
+          
+           }
+           }
+        }
+        .profile{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        cursor: pointer;
+        margin-right: 40px;
+        }
+    }
+    .info-wrapper{
+        padding: 32px 32px;
+        gap: 24px;
+        
+         .info-col-1{
+            gap: 24px;
+            
+            .stats{
+            background-color: white;
+            max-width: 726px;
+            min-height: 338px;
+            gap: 90px;
+            padding: 24px;
+            border-radius: 10px;
+            .header{
+                p{
+                    color: #1A202C;
+                    font-weight: 600;
+                }
+            }
+            .stats-img{
+            height: 220px;
+            width: 700px;
+            
+            }
+            }
+            .income-expense{
+                display: flex;
+                .line{
+                    color: #F0F0F0;
+                    height: 100px;
+                    width: 1px;
+                }
+                .income-card{
+                    width: 340px;
+                    min-height: 168px;
+                    background-color: white;
+                    padding: 24px 24px;
+                    gap: 19px;
+                    border-radius: 10px;
+                    .line-1{
+
+                        p{
+                            color: #1A202C;
+                            font-weight: 600;
+                            font-size: 16px;
+                        }
+                    }
+                    .line-2{
+                        display: flex;
+                        align-items: center;
+                        .price{
+                            color:#1A202C ;
+                            font-weight: 700;
+                            font-size: 32px;
+                        }
+                        .usd{
+                            color: #90A3BF;
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+                    .line-3{
+                        p{
+                            font-size: 12px;
+                            color: #90A3BF;
+                            .green{
+                                color: #7FB519;
+                            }
+                            .red{
+                                color: #FF4423;
+                            }
+                        }
+                    }
+                }
+            }
+            .history-card{
+                background-color: white;
+                max-width: 726px;
+                min-height: 326px;
+                padding: 19px 24px 26px 24px;
+                gap: 39px;
+                border-radius: 10px;
+                .row-wrapper{
+                    gap: 14px;
+                    .line{
+                        background-color: #E0E9F4;
+                        width: 730px;
+                        height: 1px;
+                    }
+                   .row{
+                    align-items: center;
+                    padding: 8px 17px 7px 0;
+                    p{
+                        color: #1A202C;
+                            font-weight: 600;
+                    }
+                    .brand{
+                        p{
+                            color: #1A202C;
+                            font-weight: 600;
+                        }
+                    }
+                   }
+                }
+                .transactions{
+                    p{
+                        font-size: 12px;
+                        color: #90A3BF;
+                        font-weight: 500;
+                    }
+                }
+                .header{
+                    align-items: center;
+                    p{
+                        color: #1A202C;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    a{
+                        padding: 10px 16px 10px 42px;
+                        border: 1px solid #C3D4E9;
+                        border-radius: 6px;
+                        color: #1A202C;
+                        font-weight: 600;
+                        font-size: 12px;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                    }
+                }
+            }
+         } 
+         .info-col-2{
+            gap: 24px;
+            .balance-card{
+                background-color: white;
+                width: 340px;
+                min-height: 271px;
+                padding: 24px 24px;
+                gap: 40px;
+                border-radius: 10px;
+                .header{
+                    p{
+                        color: #1A202C;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                }
+                .line-2{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .price{
+                        color:#1A202C ;
+                        font-weight: 700;
+                        font-size: 32px;
+                        text-align: center;
+                    }
+                    .usd{
+                        color: #90A3BF;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                }
+                .desc{
+                    color: #90A3BF;
+                    font-size: 12px;
+                    font-weight: 600;
+                    
+                }
+                .button-wrapper{
+                    gap: 24px;
+                    margin-top: 30px;
+                    .primary-btn{
+                        background-color: $text-background-color;
+                        padding: 16px 30px 16px 20px;
+                        color: white;
+                        border-radius: 10px;
+                        gap: 15px;
+                        max-width: 114px;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                    .secondary-btn{
+                        background-color: transparent;
+                        padding: 16px 30px 16px 20px;
+                        color: black;
+                        border-radius: 10px;
+                        gap: 15px;
+                        max-width: 114px;
+                        border: 2px solid $text-background-color;
+                        font-weight: 600;
+                        font-size: 14px;
+                        transition: 10ms;
+                    }
+                    .secondary-btn:hover{
+                        background-color: $text-background-color;
+                        color: white;
+                        transition: 900ms;
+                    }
+                }
+            }
+            .category-card{
+                background-color: white;
+                max-width: 340px;
+                min-height: 585px;
+                border-radius: 10px;
+                padding: 24px 24px 33px 24px;
+                gap: 35px;
+                .header{
+                    p{
+                        color: #1A202C;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                }
+                .row-wrapper{
+                    gap: 20px;
+                    .row{
+                        p{
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #1A202C;
+                        }
+                        .category{
+                            gap: 12px;
+                            p{
+                                font-size: 12px;
+                                color: #596780;
+                                font-weight: 600;
+                                
+                            }
+                        }
+                    }
+                }
+                
+            }
+         }
+         }
+    }
+}
+.testimonials-layout{
+    width:100%;
+    height: 80vh;
+    background-color: #0d121f;
+    padding: 120px 90px 90px 10px;
+    flex-direction: column;
+    gap: 64px;
+    
+    @include responsive(smartphone-portrait){
+        flex-direction: column;
+        margin-top: 500px;
+    }
+    .header-title{
+        gap: 24px;
+        
+        .title-f{
+            color: #7C5CFC;
+            font-size: 20px;
+            font-weight: 600;
+            
+        }
+        .title-s{
+            color: #ffff;
+            font-size: 40px;
+            font-weight: 700;
+            
+        }
+        .desc{
+            color: #90A3BF;
+            font-weight: 400;
+            font-size: 20px;
+            
+        }
+    }
+    .card-wrapper{
+        gap: 24px;
+        @include responsive(smartphone-portrait){
+            flex-direction: column;
+        }
+        .card{
+            background-color: #1A202C;
+            max-width: 384px;
+            min-height: 320px;
+            padding: 32px 32px;
+            border-radius: 12px;
+            gap: 50px;
+            .texts{
+                gap: 16px;
+                .header{
+                    color: white;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                .main{
+                    color: white;
+                    font-weight: 500;
+                    font-size: 16px;
+                    max-width: 300px;
+                }
+            }
+            .line{
+                background-color: #90A3BF;
+                width: 320px;
+                height: 1px;
+                opacity: 30%;
+            }
+            .profile-row{
+                gap: 24px;
+                .profile-texts{
+                    
+                    .name{
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: white;
+                    }
+                    .job{
+                        color: #C3D4E9;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .button-wrapper{
+        gap: 24px;
+        text-align: center;
+        .primary-btn{
+            background-color:#1A202C ;
+            border-radius: 100px;
+            padding: 16px 15px;
+            
+        }
+        .secondary-btn{
+            background-color:#7C5CFC ;
+            border-radius: 100px;
+            padding: 16px 15px;
+            
+        }
+    }
+}
+
+.d-col{
+    display: flex;
+    flex-direction: column;
+}
+.f-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-spb{
+display: flex;
+justify-content: space-between;
+}
+.d-flex{
+    display: flex;
+}
+.a-center{
+    align-items: center;
+}
